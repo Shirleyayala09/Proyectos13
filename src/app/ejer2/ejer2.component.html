@@ -1,0 +1,16 @@
+<div mt-3>
+    <h3>CURRENCY PIPES</h3>
+    <div>
+    <p>Valor:</p>
+    <input type="text" [(ngModel)]="dinero">
+    <select name="select" [(ngModel)]="moneda">
+        <option value="nada">Selecciona el tipo de moneda</option>
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+    </select>
+
+    <p *ngIf="moneda === 'usd'"> USD : {{dinero | currency: 'USD' }} </p>
+    <p *ngIf="moneda === 'eur'"> EUR :{{dinero | currency: 'EUR'}} </p>
+    </div>
+</div>
+

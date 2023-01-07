@@ -1,0 +1,11 @@
+<div>
+    <label for="">Ingrese fecha(mes/día/año),hora(00:00):</label><br>
+      
+    <input type="text" [(ngModel)]="fecha">
+
+    <button (click)="calcular()" class="btn btn-success">Calcula el tiempo </button>
+    <p>Fecha Actual : {{fa | date: 'shortDate'}}</p>
+    <p class="text-danger">Resultado - Fecha :{{fecha | date: 'medium'}}</p>
+    <p class="text-danger">Final:{{tiempo}}</p>
+    
+</div>
